@@ -4,7 +4,9 @@ xlabel('X1 (Neuron 1)')
 ylabel('X2 (Neuron 2)')
 title('Gaussian (shared covariance)')
 hold on
-%% a
+
+%% Plots the data points in a two-dimensional space. For classes k = 1, 2, 3,
+%% uses a red ×, green +, and blue ◦ for each data point, respectively. 
 for k = 1:3
 [X1, X2] = getValues(trial, k);
 if k == 1; marker = 'rx';
@@ -15,7 +17,8 @@ plot(X1, X2, marker, 'LineWidth', 1.5)
 end
 axis([0 20 0 20])
 
-%% b & c
+%% Finds the maximum likelihood (ML) parameters for a Gaussian generative model with shared covariance,
+%% and plots the ML mean as a solid dot.
 pi = 20/60; %Nk/N
 
 [mu1] = getMu(trial, 1);
@@ -44,7 +47,7 @@ for k = 1:3
     sigma = (S*pi) + sigma;
 end 
 
-%% d
+%% For each class, plots the ML covariance using an ellipse of the appropriate color. 
 x1 = linspace(0,20);
 x2 = linspace(0,20);
 [X1,X2] = meshgrid(x1(:),x2(:));
@@ -58,5 +61,7 @@ contour(X1, X2, Z, [0.007, 0.007], 'g');
 Z = mvnpdf(X, mu3', sigma);
 Z = reshape(Z,[100 100]);
 contour(X1, X2, Z, [0.007, 0.007], 'b');
-%% e
+
+%% Plot multi-class decision boundaries corresponding to the decision rule:
+%% ˆk = argmax_k P(Ck | x)
 plotDecisionSharedSigma(mu1, mu2, mu3, sigma);
