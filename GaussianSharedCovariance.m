@@ -4,7 +4,7 @@ xlabel('X1 (Neuron 1)')
 ylabel('X2 (Neuron 2)')
 title('Gaussian (shared covariance)')
 hold on
-%% Plot the data points in a two-dimensional space. For classes k = 1, 2, 3, uses a red ×, green +, and blue ? for each data point, respectively. 
+%% Plot the data points in a two-dimensional space. For classes k = 1, 2, 3, uses a red ×, green +, and blue o for each data point, respectively. 
 for k = 1:3
 [X1, X2] = getValues(trial, k);
 if k == 1; marker = 'rx';
