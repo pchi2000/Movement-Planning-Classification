@@ -1,10 +1,10 @@
-load('ps3_simdata.mat')
+load('sim_data.mat')
 figure
 xlabel('X1 (Neuron 1)')
 ylabel('X2 (Neuron 2)')
 title('Gaussian (shared covariance)')
 hold on
-%% Plot the data points in a two-dimensional space. For classes k = 1, 2, 3, uses a red ×, green +, and blue ? for each data point, respectively. 
+%% Plot the data points in a two-dimensional space. For classes k = 1, 2, 3, uses a red Ã—, green +, and blue ? for each data point, respectively. 
 for k = 1:3
 [X1, X2] = getValues(trial, k);
 if k == 1; marker = 'rx';
@@ -58,7 +58,7 @@ contour(X1, X2, Z, [0.007, 0.007], 'g');
 Z = mvnpdf(X, mu3', sigma);
 Z = reshape(Z,[100 100]);
 contour(X1, X2, Z, [0.007, 0.007], 'b');
-%% Plot multi-class decision boundaries corresponding to the decision rule: ˆk = argmax_k P(Ck | x)
+%% Plot multi-class decision boundaries corresponding to the decision rule: Ë†k = argmax_k P(Ck | x)
 plotDecisionSharedSigma(mu1, mu2, mu3, sigma);
 
 %% FUNCTIONS
