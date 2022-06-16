@@ -1,4 +1,4 @@
-load('ps3_simdata.mat')
+load('sim_data.mat')
 figure
 xlabel('X1 (Neuron 1)')
 ylabel('X2 (Neuron 2)')
