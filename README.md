@@ -9,7 +9,6 @@ To make the simulated data as realistic as possible, the data are non-negative i
 so one can think of them as spike counts. With this analogy, there are D = 2 neurons
 and K = 3 stimulus conditions.
 
-The naïve Bayes algorithm is implemented via 3
-different class distributions: Gaussian with shared covariance, 
+The naïve Bayes algorithm is implemented via 3 different class distributions: Gaussian with shared covariance, 
 Gaussian with class-specific covariance, and Poisson. 
 Each type of class distribution has its own file with the matlab (.m) code and a pdf showing the code with accompanying visuals. 
