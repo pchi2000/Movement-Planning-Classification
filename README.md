@@ -11,3 +11,6 @@ and K = 3 stimulus conditions.
 
 The naïve Bayes algorithm is implemented via 3 different class distributions: Gaussian with shared covariance, Gaussian with class-specific covariance, and Poisson. 
 Each type of class distribution has its own file with matlab (.m) code and a pdf showing the code with accompanying visuals. 
+
+Included are some notes on the more in-depth details of a naïve Bayes classifier, specifically, the math used to derive the maximum likelihood parameters for the 
+Gaussian model with shared covariance.
