@@ -1,5 +1,5 @@
-# Movement-Planning-Classification
-Implemented classification algorithm via naïve Bayes classifier to classify data related to movement planning 
+# Naive Bayes Classifier
+Classifies data related to movement planning 
 
 The sim_data.mat file has a single variable named
 trial, which is a structure of dimensions (20 data points) × (3 classes). The nth data
