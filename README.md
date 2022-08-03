@@ -1,5 +1,5 @@
 # Naive Bayes Classifier
-Classifies data related to movement planning 
+Classifies data as beloning to one of three angles to aid in movement planning. 
 
 The sim_data.mat file has a single variable named
 trial, which is a structure of dimensions (20 data points) × (3 classes). The nth data
